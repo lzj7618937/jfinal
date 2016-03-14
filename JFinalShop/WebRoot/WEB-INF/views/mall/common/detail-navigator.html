@@ -1,0 +1,26 @@
+<!-- 工具栏 -->
+<nav class="bar bar-tab">
+    <a id="nav-page-index" class="tab-item" href='${ctxPath}/weixin/mall#page-index' external>
+        <span class="icon icon-home"></span>
+        <span class="tab-label">首页</span>
+    </a>
+    <a id="nav-page-star" class="tab-item" href="${ctxPath}/weixin/mall#page-star" external>
+        <span class="icon icon-star"></span>
+        <span class="tab-label">收藏</span>
+    </a>
+    <!--不用缓存，生成新请求-->
+    <a id="nav-page-cart" class="tab-item" href="${ctxPath}/weixin/mall#page-cart" data-no-cache="true" external>
+        <span class="icon icon-cart"></span>
+        <span class="tab-label">购物车</span>
+    </a>
+    <!--不用缓存，生成新请求-->
+    <a id="nav-page-addCart" class="tab-item" href="#" data-no-cache="true" external>
+        <span class="icon icon-gift"></span>
+        <span class="tab-label">加入购物车</span>
+    </a>
+    <!--不用缓存，生成新请求-->
+    <a id="nav-page-buy" class="tab-item" href="${ctxPath}/weixin/buy" data-no-cache="true" external>
+        <span class="icon icon-check"></span>
+        <span class="tab-label">立即购买</span>
+    </a>
+</nav>

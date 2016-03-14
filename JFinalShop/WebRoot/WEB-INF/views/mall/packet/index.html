@@ -1,0 +1,66 @@
+<%layout("/mall/common/default.html",{'title' : '微商城'}){%>
+<div class="page-group">
+    <div id="page-packet-main" class="page page-current">
+        <%include("/mall/packet/head.html",{'title' : '商品详情'}){}%>
+        <div class="content-padded infinite-scroll infinite-scroll-bottom" data-distance="100">
+            <!-- Slider -->
+            <div class="swiper-container" data-space-between='100'>
+                <div class="swiper-wrapper">
+
+                    <!--<div class="swiper-slide photo-browser-slide"><img-->
+                            <!--src="//gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i1/TB1kQI3HpXXXXbSXFXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg"-->
+                            <!--alt=""></div>-->
+                </div>
+                <div class="swiper-pagination"></div>
+
+            </div>
+             <div id="package-name" >
+                 <h1 class="dtif-h">${packet.name}</h1>
+             </div>
+            <div id="price" >
+               <p class="orange">${packet.price,numberFormat="￥##.##元"}</p>
+            </div>
+
+            <!-- 加载提示符 -->
+            <div class="infinite-scroll-preloader">
+                <div class="preloader"></div>
+            </div>
+        </div>
+        <%include("/mall/common/detail-navigator.html",{'direct':true}){}%>
+        <%include("/mall/common/profile.html"){}%>
+    </div>
+    <div id="page-packet-popup" class="popup popup-about">
+        <%include("/mall/packet/popup-head.html",{'title' : '商品详情'}){}%>
+        <div class="content">
+                <div id="fixed-buttons" class="buttons-tab fixed-tab" data-offset="46">
+                    <a href="#tabProductDetail" class="tab-link button active">图文详情</a>
+                    <a href="#tabProductParam" class="tab-link button ">商品参数</a>
+                    <a href="#tabStoreRecommend" class="tab-link button">评论</a>
+                </div>
+                <div class="tabs">
+                    <div id="tabProductDetail" class="tab active">
+                        <div class="content-block">
+                            <div id="imageText" class="content-block">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tabProductParam" class="tab">
+                        <div class="content-block">
+                        </div>
+                    </div>
+                    <!--活动-->
+                    <div id="tabStoreRecommend" class="tab">
+                        <div class="content-block">
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+        <%include("/mall/common/detail-navigator.html",{'direct':true}){}%>
+    </div>
+    <%include("/mall/common/profile.html"){}%>
+    <!--手机端script需要加载后方-->
+    <%include("/mall/common/script.html"){}%>
+    <script type="text/javascript" src="${ctxPath}/js/sui/packet.js"></script>
+</div>
+<%}%>

@@ -1,0 +1,17 @@
+<%layout("/mall/common/default.html",{'title' : '微商城'}){%>
+<div class="page-group">
+    <div id="page-product" class="page page-current">
+        <%include("/mall/product/head.html",{'title' : '热销商品'}){}%>
+        <div class="content">
+            <div id="imageText" class="content-block">
+                ${product.description}
+            </div>
+        </div>
+        <%include("/mall/common/detail-navigator.html",{'direct':true}){}%>
+    </div>
+    <%include("/mall/common/profile.html"){}%>
+    <!--手机端script需要加载后方-->
+    <%include("/mall/common/script.html"){}%>
+    <script type="text/javascript" src="${ctxPath}/js/sui/product.js"></script>
+</div>
+<%}%>
